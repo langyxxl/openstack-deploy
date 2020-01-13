@@ -37,6 +37,7 @@ su - stack -c 'sed -i "/add-apt-repository -y universe/s/^/#/" devstack/tools/fi
 
 cat  > /opt/stack/devstack/local.conf <<EOF
 [[local|localrc]]
+USE_PYTHON3=True
 ADMIN_PASSWORD=321
 DATABASE_PASSWORD=\$ADMIN_PASSWORD
 RABBIT_PASSWORD=\$ADMIN_PASSWORD
